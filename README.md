@@ -1,18 +1,19 @@
-## Getting Started
+PROJETO FINAL POO I
+   Um simples jogo de batalha entre exércitos, cada um com seus respectivos integrantes e líderes, o exército que derrotar todos os integrantes do exército adversário ganha.
+- Cada integrante tem 3 opções: "Atacar", "Defender" e "Usar itens".
+- Cada classe de personagem: "Mago", "Cavaleiro" e "Arqueiro" possui diferentes aspectos como dano, proteção e ataque.
+- O jogo se inicia com cada jogador escolhendo o nome do exército e o líder.
+- Logo após é jogado um "Cara ou Coroa", para decidir qual exército começa.
+- Cada integrante do exército é escolhido automaticamente e aleatoriamente, exceto o líder.
+- Cada exército possui 2 itens/poções de cada: força, defesa e cura.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Itens
+- O jogo possui 3 itens/poções: poção de cura, defesa e força.
+- A poção de cura quando utilizada aumenta em +20 os pontos de vida do integrante.
+- A poção de força quando utilizada aumenta em +10 os pontos de força do integrante.
+- A poção de defesa quando utilizada aumenta em +10 os pontos de defesa do integrante.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Classes:
+- Mago: 100 de vida, 15 de dano inicial e 10 de proteção.
+- Cavaleiro: 100 de vida, 20 de dano inicial e 10 de proteção.
+- Arqueiro: 100 de vida, 20 de dano inicial e 5 de proteção.
