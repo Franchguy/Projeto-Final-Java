@@ -39,7 +39,6 @@ public class Exército {
         if (itens.contains(item)) {
             item.usar(personagem);
             itens.remove(item);
-            System.out.println(personagem.getNome() + " usou " + item.getClass());
         } else {
             System.out.println("Item não disponível!");
         }

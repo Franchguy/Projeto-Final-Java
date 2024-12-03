@@ -20,7 +20,7 @@ public class Jogo {
 
         System.out.println(exército1.getNome() + " criado com sucesso!");
 
-        Thread.sleep(2000);
+        
 
         //Exército 2
         Exército exército2 = iniciarExército();
@@ -46,30 +46,30 @@ public class Jogo {
             return null;
         }
 
-        Thread.sleep(2000);
+        
 
         String nome;
         switch (escolha) {
             case 1:
                 System.out.println("Mago escolhido como líder!");
-                Thread.sleep(2000);
+                
                 System.out.println("Digite o nome do seu Mago: ");
                 nome = scanner.nextLine();
-                Thread.sleep(2000);
+                
                 return new Mago(nome);
             case 2:
                 System.out.println("Cavaleiro escolhido como líder!");
-                Thread.sleep(2000);
+                
                 System.out.println("Digite o nome do seu Cavaleiro: ");
                 nome = scanner.nextLine();
-                Thread.sleep(2000);
+                
                 return new Cavaleiro(nome);
             case 3:
                 System.out.println("Arqueiro escolhido como líder!");
-                Thread.sleep(2000);
+                
                 System.out.println("Digite o nome do seu Arqueiro: ");
                 nome = scanner.nextLine();
-                Thread.sleep(2000);
+                
                 return new Arqueiro(nome);
             default:
                 System.out.println("Entrada incorreta!");
@@ -111,14 +111,10 @@ public class Jogo {
             System.out.println("Entrada incorreta!");
             return null;
         }
-        Thread.sleep(2000);
+        
 
         Personagem personagemLíder = selecionarPersonagem();
 
         return new Exército(nomeExército, personagemLíder);
-    }
-
-    public void fecharScanner() {
-        scanner.close();
     }
 }

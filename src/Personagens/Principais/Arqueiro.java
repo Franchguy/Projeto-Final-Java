@@ -31,6 +31,9 @@ public class Arqueiro extends Personagem {
         else {
             float danoFinal = dano - this.protecao;
             this.vida = this.vida - danoFinal;
+            if (this.vida <= 0) {
+                this.vida = 0;
+            }
         }
     }
 }

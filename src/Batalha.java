@@ -13,11 +13,10 @@ public class Batalha {
 
     public void iniciarBatalha(Exército exército1, Exército exército2) throws InterruptedException{
         boolean jogoAtivo = true;
-
         System.out.println("\nJogar cara ou coroa");
         Thread.sleep(2000);
+        
         System.out.println("\nCara: " + exército1.getNome() + "\nCoroa: " + exército2.getNome());
-
         Thread.sleep(2000);
 
         int numeroSorteado = (int) (Math.random() * 2);
@@ -25,16 +24,21 @@ public class Batalha {
         Exército exércitoInimigo = (exércitoAtual == exército1) ? exército2 : exército1;
     
         System.out.println((numeroSorteado == 0 ? "Cara!" : "Coroa!"));
-        System.out.println(exércitoAtual.getNome() + " irá começar!");
+        Thread.sleep(500);
 
+        System.out.println(exércitoAtual.getNome() + " irá começar!");
+        Thread.sleep(2000);
         while (jogoAtivo) {
             System.out.println("\n--- Rodada " + rodadas + " ---");
-            Thread.sleep(2000);
-    
+            
             for (Personagem personagem : exércitoAtual.getPersonagens()) {
+                if (exército1.estaDerrotado() || exército2.estaDerrotado()) {
+                    jogoAtivo = false;
+                    System.out.println("\nO exército " + (exército1.estaDerrotado() ? exército2.getNome() : exército1.getNome()) + " venceu!");
+                    break;
+                }
                 if (personagem.estaVivo()) {
                     realizarAcao(personagem, exércitoInimigo);
-                    Thread.sleep(2000);
                 }
             }
 
@@ -43,19 +47,11 @@ public class Batalha {
             exércitoInimigo = temp;
     
             adicionarRodada();
-
-            if (exército1.estaDerrotado() || exército2.estaDerrotado()) {
-                jogoAtivo = false;
-                System.out.println("\nO exército " + (exército1.estaDerrotado() ? exército2.getNome() : exército1.getNome()) + " venceu!");
-            }
         }
     }
 
     public void realizarAcao(Personagem personagem, Exército exército) throws InterruptedException {
-        System.out.println("\n" + personagem.getNome() + ", escolha sua ação:");
-        System.out.println("1 - Atacar");
-        System.out.println("2 - Defender");
-        System.out.println("3 - Usar item");
+        System.out.println("\n" + personagem.getNome() + ", escolha sua ação:\n 1 - Atacar\n 2 - Defender\n 3 - Usar item");
     
         int escolha;
         try {

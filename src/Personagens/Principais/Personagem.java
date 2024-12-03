@@ -12,7 +12,7 @@ public abstract class Personagem {
     // CONSTRUTOR
     public Personagem(String nome){
         this.nome = nome;
-        vida = 10;
+        vida = 100;
         this.defendendo = false;
     }
 

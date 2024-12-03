@@ -1,7 +1,7 @@
 package Itens;
 import Personagens.Principais.Personagem;
 
-public class PocaoForca extends Itens {
+public class PocaoForca implements Itens {
     private int forca;
 
     public PocaoForca() {

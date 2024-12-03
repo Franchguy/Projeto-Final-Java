@@ -1,7 +1,7 @@
 package Itens;
 import Personagens.Principais.Personagem;
 
-public abstract class Itens {
+public interface Itens {
 
-    public abstract void usar(Personagem personagem);
+    public void usar(Personagem personagem);
 }
